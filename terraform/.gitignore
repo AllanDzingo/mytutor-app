@@ -1,0 +1,11 @@
+# Terraform
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/terraform.tfvars
+
+# GCP credentials
+*.json
+service-account-key.json
+gcp-credentials.json

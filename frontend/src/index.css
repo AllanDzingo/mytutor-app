@@ -1,0 +1,310 @@
+:root {
+  --primary: #8b5cf6;
+  --primary-light: #a78bfa;
+  --primary-dark: #7c3aed;
+  --secondary: #3b82f6;
+  --secondary-light: #60a5fa;
+  --background: #0f172a;
+  --surface: rgba(30, 41, 59, 0.7);
+  --surface-light: rgba(51, 65, 85, 0.8);
+  --text: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --success: #10b981;
+  --error: #ef4444;
+  --border: rgba(148, 163, 184, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: var(--surface);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  max-width: 500px;
+  width: 100%;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 70px rgba(139, 92, 246, 0.2);
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-light), var(--secondary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+p {
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.5;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: var(--surface-light);
+  color: var(--text);
+  margin-top: 1rem;
+}
+
+.btn-secondary:hover {
+  background: rgba(51, 65, 85, 1);
+}
+
+/* Toggle Link */
+.toggle-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.toggle-link button {
+  background: none;
+  border: none;
+  color: var(--primary-light);
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.toggle-link button:hover {
+  color: var(--primary);
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.info-card {
+  background: var(--surface-light);
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateX(5px);
+  border-color: var(--primary);
+}
+
+.info-card h3 {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.info-card p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+  text-align: left;
+}
+
+/* Tutor Response */
+.tutor-response {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1));
+  border-radius: 16px;
+  margin-top: 2rem;
+  animation: fadeIn 0.5s ease;
+}
+
+.tutor-response h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tutor-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-light), var(--secondary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: slideUp 0.5s ease;
+}
+
+/* Quiz Section */
+.quiz-content {
+  background: var(--surface-light);
+  padding: 2rem;
+  border-radius: 16px;
+  margin-top: 2rem;
+  white-space: pre-wrap;
+  line-height: 1.8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+}
+
+/* Error Message */
+.error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--error);
+  color: var(--error);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Success Message */
+.success {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid var(--success);
+  color: var(--success);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .glass-card {
+    padding: 2rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}

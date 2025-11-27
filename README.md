@@ -188,9 +188,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📧 Contact
 
-Your Name - [@yourhandle](https://twitter.com/yourhandle)
+Your Name - [@AllanDzingo](https://twitter.com/allandzingo)
 
-Project Link: [https://github.com/YOUR_USERNAME/mytutor](https://github.com/YOUR_USERNAME/mytutor)
+Project Link: [https://github.com/AllanDzingo/mytutor](https://github.com/AllanDzingo/mytutor)
 
 ---
 
